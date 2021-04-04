@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table id="dsTable">
+    <tbody>
+      <tr>
+        <td>Relationship Type</td>
+        <td>Date of Birth</td>
+        <td>Gender</td>
+      </tr>
+      <tr>
+        <td>Spouse</td>
+        <td>1980-22-03</td>
+        <td>female</td>
+        <td><input type="button" value="Add" onclick="add()" /></td>
+        <td><input type="button" value="Delete" onclick="deleteRow(this)" /></td>
+      </tr>
+      <tr>
+        <td>Child</td>
+        <td>2008-23-06</td>
+        <td>female</td>
+        <td><input type="button" value="Add" onclick="add()" /></td>
+        <td><input type="button" value="Delete" onclick="deleteRow(this)" /></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function deleteRow(btn) {
+      var row = btn.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+    }
+  </script>
+</body>
+
+</html>
